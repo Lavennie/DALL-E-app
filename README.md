@@ -1,7 +1,12 @@
 # DALL-E-app
 ## Prepare for use
 First download a release from: https://github.com/Lavennie/DALL-E-app/releases and unpack it (files are directly in archive not inside a folder).
-Then replace the *sk-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX* inside *config.txt* with your openai API key.
+Then replace the *sk-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX* inside *config.txt* with your openai API key.  
+Then install openai library with the next command
+```
+pip install openai
+```
+Now run the *dall-e.py* file.
 
 ## Getting the openai API key
 - Go to https://beta.openai.com/overview.
