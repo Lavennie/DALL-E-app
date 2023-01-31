@@ -14,7 +14,7 @@ GREEN_FG = "\033[32m"
 YELLOW_FG = "\033[93m"
 
 def printError(msg):
-    print(RED_FG + msg + "\n")
+    print(RED_FG + str(msg) + "\n")
 def imageGenerateCountPrompt():
     return min(max(int(input(FG_COLOR + "Enter image count between 1-10" +
         "(inputs will be limited to this range)\n" + PROMPT_COLOR)), 1), 10)
@@ -142,9 +142,10 @@ while (inputText != "q"):
                     printError("Given path to source image does not exist")
             else:
                 printError("This mode is not yet imaplemented, please swap to another mode")
-        except:
+        except Exception as e:
             printError("Failed request. Possible reasons:\n" +
                        "- Key in \'config.txt\' is invalid\n" +
                        "- Limit of 10 images per minute or 25 images per 5 minutes has been reached, in this case please wait a bit")
+            printError(e)
             input()
             break
